@@ -1,0 +1,26 @@
+官网地址：https://mvnrepository.com/artifact/commons-httpclient/commons-httpclient/3.1
+【如果打不开，请注意可能需要使用vpn】
+1.参考链接：https://blog.csdn.net/wshjk/article/details/123879847
+注意①：
+    1.设置项目的启动依赖：
+    https://blog.csdn.net/weixin_37646636/article/details/120462120
+    https://blog.csdn.net/lyq_cc/article/details/118027849
+    我们创建的SpringBoot项目中的pom.xml文件中都依赖了SpringBoot的父项目，所以项目中必须要有<parent>引用
+    而spring-boot-starter-parent它又继承了spring-boot-dependencies，它来真正管理Spring Boot应用里面的所有依赖版本。
+    Spring Boot的版本仲裁中心；
+            以后我们导入依赖默认是不需要写版本；（没有在dependencies里面管理的依赖自然需要声明版本号）
+     <parent>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-parent</artifactId>
+            <version>2.6.5</version>
+     </parent>
+     2.spring-boot-starter：spring-boot场景启动器；帮我们导入了web模块正常运行所依赖的组件；
+     Spring Boot将所有的功能场景都抽取出来，做成一个个的starters（启动器），只需要在项目里面引入这些starter相关场景的所有依赖都会导入进来。要用什么功能就导入什么场景的启动器。
+     对全栈web开发的支持，包括Tomcat和spring-webmvc
+     <dependency>
+                 <groupId>org.springframework.boot</groupId>
+                 <artifactId>spring-boot-starter-web</artifactId>
+                 <version>2.6.5</version>
+     </dependency>
+2.如果启动类报错，注意是不是包的目录结构有问题
+3.yml文件

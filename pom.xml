@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!--modelVersion描述这个POM文件是遵从哪个版本的项目描述符-->
+    <!--modelVersion：指定了当前POM模型的版本、对于Maven2及Maven3来说，它只能是4.0.0 -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.dsm</groupId> <!--groupId 一般为 域名 + 公司名 -->
+    <artifactId>JavaLearning</artifactId><!--artifactId 一般是 项目名 或 模块名-->
+    <version>1.0-SNAPSHOT</version><!--项目当前版本、格式为:主版本.次版本.增量版本-限定版本号 -->
+    <!--举个apache公司的tomcat项目例子:
+	org.apache.tomcat; 域有 org、com、cn等，其中org为非营利组织，com为商业组织;apache 为公司名；tomcat为项目名-->
+
+
+    <!--我们创建的SpringBoot项目中的pom.xml文件中都依赖了SpringBoot的父项目，所以项目中必须要有<parent>引用
+    而spring-boot-starter-parent它又继承了spring-boot-dependencies，它来真正管理Spring Boot应用里面的所有依赖版本。
+    -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.5.5</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <!--项目相关的所有依赖-->
+    <dependencies>
+
+        <!--Spring Boot 核心 starter，包括自动配置支持，日志和YAML-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--对全栈web开发的支持，包括Tomcat和spring-webmvc-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!--单元测试启动器-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!--websocket包-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-websocket</artifactId>
+        </dependency>
+
+        <!--builder方式创建文件-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+        <!--用于数据校验-->
+        <!--SpringBoot 2.3.0 之后就没有引入 validation 对应的包，需要手动添加依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
+        <!--依赖包只能放在这里,还需要注意版本，protoc -version可以查看版本
+        https://blog.51cto.com/u_15057852/4030951
+        -->
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>3.17.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java-util</artifactId>
+            <version>3.17.3</version>
+        </dependency>
+        <dependency>
+            <groupId>bigbang</groupId>
+            <artifactId>season1-sdk</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <scope>test</scope>
+        </dependency>
+        <!--这是proto-->
+    </dependencies>
+    <!--构建项目需要的信息-->
+    <build>
+        <!--使用的插件列表-->
+        <plugins>
+            <!--maven插件，可以用maven的功能-->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>

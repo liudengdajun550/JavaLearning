@@ -1,0 +1,27 @@
+//https://www.jianshu.com/p/bb3ac7e5834e
+//https://blog.51cto.com/u_15057852/4030951?abTest=51cto
+syntax = "proto3";  // 指定使用 proto3 语法
+
+option java_package = "com.test";     // 指定包名
+option java_outer_classname = "ProtoBufTest"; // 指定类名
+
+message SearchRequest {
+    string query = 1;     // 指定字段类型为 string，标识号为 1
+    int32 page_number = 2;
+    int32 result_per_page = 3;
+    enum Corpus {         // 枚举类型
+        UNIVERSAL = 0;      // 每个枚举类型必须将其第一个类型映射为 0 作为默认值
+        WEB = 1;
+        IMAGES = 2;
+        LOCAL = 3;
+        NEWS = 4;
+        PRODUCTS = 5;
+        VIDEO = 6;
+    }
+    Corpus corpus = 4;
+    repeated Result results = 5;
+}
+
+message Result  {
+}
+
