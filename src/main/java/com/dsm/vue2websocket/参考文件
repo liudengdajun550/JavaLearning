@@ -1,0 +1,22 @@
+1.client端的websocket项目
+https://blog.csdn.net/qq_50216270/article/details/119877313
+# 参考地址：
+# socket与websocket：
+https://blog.csdn.net/weixin_42140314/article/details/80204000
+https://blog.csdn.net/jkkjklmn/article/details/41418361
+```markdown
+1.Socket与ServerSocket交互过程
+(1)服务器端程序创建一个ServerSocket，然后调用accept()方法等待客户连接。
+(2)客户端程序创建一个Socket并请求与服务器端程序建立连接。
+(3)服务器端程序接受客户端的连接请求，并创建一个新的Socket与该客户端建立专线连接。
+(4)建立了连接的客户端集服务器端的两个Socket在一个服务器端程序创建的单独的线程上对话，对话的方式是采用getInputStream(),getOutputStream(),将得到的输入与输出流进行读取与输出。
+(5)服务器端开始等待新的连接请求，重复(2)-(5)的过程。
+```
+# webSocket
+https://www.cnblogs.com/LeeScofiled/p/6940597.html
+https://developer.aliyun.com/article/577887
+
+2.VUE+server端的文本socket
+https://github.com/xdxTao/xdxIm.git
+https://www.xdx97.com/share
+

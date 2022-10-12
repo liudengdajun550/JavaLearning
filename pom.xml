@@ -84,6 +84,16 @@
             <scope>test</scope>
         </dependency>
         <!--这是proto-->
+        <!--Redis的client驱动
+        https://blog.csdn.net/Aplumage/article/details/118312200
+        -->
+        <!-- https://mvnrepository.com/artifact/io.lettuce/lettuce-core -->
+        <dependency>
+            <groupId>io.lettuce</groupId>
+            <artifactId>lettuce-core</artifactId>
+            <version>6.2.1.RELEASE</version>
+        </dependency>
+
     </dependencies>
     <!--构建项目需要的信息-->
     <build>
