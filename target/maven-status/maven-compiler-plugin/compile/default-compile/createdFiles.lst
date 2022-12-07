@@ -1,10 +1,14 @@
+com/dsm/clickhouse/StartOf.class
+com/dsm/avatar/Main.class
 com/dsm/mq/Main.class
 com/dsm/controller/HelloController.class
 com/dsm/vue2websocket/bean/User.class
 com/dsm/maps/Main.class
+com/dsm/totimstap/TimeStapTransfer.class
 com/dsm/vue2websocket/WebSocketConfiguration.class
 streamandlambad8/Main.class
 com/dsm/testBuilder/builderData.class
+com/dsm/generics/JavaGenetics.class
 redis/Main.class
 com/dsm/startServer/QuickStartConsumer.class
 streamandlambad8/Employee$EmployeeBuilder.class
@@ -13,6 +17,8 @@ com/dsm/readdata/YamlFileRead.class
 streamandlambad8/Employee.class
 com/dsm/es/Main.class
 com/dsm/testBuilder/builderData$builderDataBuilder.class
+com/dsm/git/ConflictSolved.class
+com/dsm/totimstap/Main.class
 com/dsm/enums/Charactor.class
 com/dsm/posman/Main.class
 com/dsm/vue2websocket/WebSocket.class
